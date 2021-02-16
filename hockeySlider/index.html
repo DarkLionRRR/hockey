@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOCKEY SLIDER</title>
+  <link rel="stylesheet" href="./css/include/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/include/fontawesome.css" />
+  <link rel="stylesheet" href="./css/include/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="topbar d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 col-xl-4">
+            <ul class="topsocial">
+              <li>
+                <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" class="in"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-xl-4 d-flex justify-content-center">
+            <ul class="toplinks">
+              <li class="top-adress">г. Новосибирск, ул Гоголя 51</li>
+              <li class="top-phone"><a class="phone" href="#">+7 (383) 299‒11‒22</a></li>
+            </ul>
+          </div>
+          <div class="col-3 col-xl-4 d-flex justify-content-end">
+            <ul class="toplinks">
+              <li class="lang-btn dropdown">
+                  <a class="dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Рус
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                    <li class="d-block"><a class="dropdown-item" href="#">ENG</a></li>
+                    <li class="d-block"><a class="dropdown-item" href="#">FR</a></li>
+                    <li class="d-block"><a class="dropdown-item" href="#">GR</a></li>
+                    <li class="d-block"><a class="dropdown-item" href="#">AR</a></li>
+                  </ul>
+              </li>
+              <li class="acctount-btn"> <a href="#">Личный кабинет</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-7 col-lg-3 col-xl-4"><img class="img-fluid" src="./img/logo.png" alt="Логотип" /></div>
+          <nav class="col d-flex justify-content-end align-items-center">
+            <ul id="navigation" class="navbar w-100 d-none d-lg-flex">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  О лиге
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Чемпионат
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Участники
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Медиа
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Новости</a>
+              </li>
+              <li class="nav-item position-relative">
+                <a class="nav-link pr-0 shop-link" href="#">Магазин</a>
+              </li>
+            </ul>
+            <button class="nav-toggle-btn d-flex d-lg-none">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+            <div class="mobile-nav-overly d-block d-lg-none">
+              <div class="mobile-nav">
+                <div class="accordion" id="mobileNav">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        О лиге
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#mobileNav">
+                      <div class="accordion-body">
+                        <ul class="accordion-list">
+                          <li><a href="#">Ссылка 1</a></li>
+                          <li><a href="#">Ссылка 2</a></li>
+                          <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Чемпионат
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#mobileNav">
+                      <div class="accordion-body">
+                        <ul class="accordion-list">
+                          <li><a href="#">Ссылка 1</a></li>
+                          <li><a href="#">Ссылка 2</a></li>
+                          <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Участники
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#mobileNav">
+                      <div class="accordion-body">
+                        <ul class="accordion-list">
+                          <li><a href="#">Ссылка 1</a></li>
+                          <li><a href="#">Ссылка 2</a></li>
+                          <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Медиа
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#mobileNav">
+                      <div class="accordion-body">
+                        <ul class="accordion-list">
+                          <li><a href="#">Ссылка 1</a></li>
+                          <li><a href="#">Ссылка 2</a></li>
+                          <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <a class="accordion-button collapsed" href="#">Новости</a>
+                    </h2>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <a class="accordion-button collapsed" href="#">Магазин</a>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section class="slider">
+    <div class="container">
+      <div class="row position-relative">
+        <div class="col-10 mx-auto ">
+          <div class="swiper-container slider-score">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="score-block">
+                  <p class="score-date text-center">15 февраля 10:00</p>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/ksm.png" alt="" />
+                      <span class="command-name">КСМ</span>
+                    </div>
+                    <p class="score-number">5</p>
+                  </div>
+                  <div class="score-item d-flex justify-content-between align-items-center w-100">
+                    <div class="score-command">
+                      <img src="./img/klevers.png" alt="" />
+                      <span class="command-name">Клеверс</span>
+                    </div>
+                    <p class="score-number">7</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev score-button-prev"></div>
+        <div class="swiper-button-next score-button-next"></div>
+      </div>
+
+      <div class="slider-wrapper">
+        <div class="swiper-container main-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="d-flex flex-column-reverse flex-md-row">
+                <div class="col-12 col-md-6 slider-text-block">
+                  <p class="slider-title">
+                    Прошел очередной тур Сибирской Хоккейной Лиги. Все довольны и счастливы!
+                  </p>
+                  <p class="slider-data">
+                    11.01.2021
+                  </p>
+                  <a href="#" class="slider-link">Читать подробнее</a>
+                </div>
+                <div class="col-12 col-md-6 px-0">
+                  <img src="./img/hockey.jpg" alt="hockey" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex flex-column-reverse flex-md-row">
+                <div class="col-12 col-md-6 slider-text-block">
+                  <p class="slider-title">
+                    Прошел очередной тур Сибирской Хоккейной Лиги. Все довольны и счастливы!
+                  </p>
+                  <p class="slider-data">
+                    11.01.2021
+                  </p>
+                  <a href="#" class="slider-link">Читать подробнее</a>
+                </div>
+                <div class="col-12 col-md-6 px-0">
+                  <img src="./img/hockey.jpg" alt="hockey" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex flex-column-reverse flex-md-row">
+                <div class="col-12 col-md-6 slider-text-block">
+                  <p class="slider-title">
+                    Прошел очередной тур Сибирской Хоккейной Лиги. Все довольны и счастливы!
+                  </p>
+                  <p class="slider-data">
+                    11.01.2021
+                  </p>
+                  <a href="#" class="slider-link">Читать подробнее</a>
+                </div>
+                <div class="col-12 col-md-6 px-0">
+                  <img src="./img/hockey.jpg" alt="hockey" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="match">
+    <div class="container">
+      <div class="match-header d-md-flex justify-content-between align-items-center">
+        <h2 class="headline">Таблицы и матчи</h2>
+        <ul class="match-list d-none d-md-flex">
+          <li class="match-list__item active">Покрышкина</li>
+          <li class="match-list__item">Чкалова</li>
+          <li class="match-list__item">Первенство</li>
+        </ul>
+
+        <div class="match__dropdown d-block d-md-none">
+          <a class="dropdown-toggle" href="#" id="matchDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Покрышкина
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="matchDrop">
+            <li><a class="dropdown-item" href="#">Покрышкина</a></li>
+            <li><a class="dropdown-item" href="#">Чкалова</a></li>
+            <li><a class="dropdown-item" href="#">Первенство</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-lg-2 g-4">
+        <div class="col">
+          <div class="table-responsive">
+            <table class="table match-table">
+              <thead>
+                <tr>
+                  <th scope="col">Дата и время</th>
+                  <th scope="col">Стадион</th>
+                  <th scope="col">Матч</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>16 февраля<br/>10:00</td>
+                  <td>Стадион:<br/>ЛДС “Бедрдск”</td>
+                  <td>Арпа : Бердск</td>
+                </tr>
+                <tr>
+                  <td>16 февраля<br/>10:00</td>
+                  <td>Стадион:<br/>ЛДС “Бедрдск”</td>
+                  <td>Арпа : Бердск</td>
+                </tr>
+                <tr>
+                  <td>16 февраля<br/>10:00</td>
+                  <td>Стадион:<br/>ЛДС “Бедрдск”</td>
+                  <td>Арпа : Бердск</td>
+                </tr>
+                <tr>
+                  <td>16 февраля<br/>10:00</td>
+                  <td>Стадион:<br/>ЛДС “Бедрдск”</td>
+                  <td>Арпа : Бердск</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#" class="match__link link d-block text-end">Смотреть все матчи</a>
+        </div>
+        <div class="col">
+          <div class="table-responsive">
+            <table class="table table-striped match-table">
+              <thead>
+                <tr>
+                  <th scope="col">Место</th>
+                  <th scope="col">Команда</th>
+                  <th scope="col">И</th>
+                  <th scope="col">В</th>
+                  <th scope="col">ВО</th>
+                  <th scope="col">ВБ</th>
+                  <th scope="col">П</th>
+                  <th scope="col">ПО</th>
+                  <th scope="col">ПБ</th>
+                  <th scope="col">ШЗ-ШП</th>
+                  <th scope="col">О</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Арпа</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>52-66</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Арпа</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>52-66</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Арпа</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>52-66</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Арпа</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>52-66</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Арпа</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>52-66</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Арпа</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>52-66</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Арпа</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>52-66</td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Арпа</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>0</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>52-66</td>
+                  <td>8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="#" class="match__link link d-block text-end">Смотреть все таблицы</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="leaders">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 mb-4 mb-lg-0">
+          <h2 class="headline">Лидеры</h2>
+          <p class="leader-card-title">Лидер среди бомбардиров:</p>
+          <img src="./img/card.png" alt="" class="img-fluid" />
+        </div>
+        <div class="col-12 col-lg-8">
+          <div class="leader-header d-flex justify-content-md-between align-items-center">
+            <div class="match__dropdown">
+              <a class="dropdown-toggle" href="#" id="bombDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Бомбардиры
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="bombDrop">
+                <li><a class="dropdown-item" href="#">Бомбардиры 1</a></li>
+                <li><a class="dropdown-item" href="#">Бомбардиры 2</a></li>
+                <li><a class="dropdown-item" href="#">Бомбардиры 3</a></li>
+              </ul>
+            </div>
+            <ul class="match-list d-none d-md-flex">
+              <li class="match-list__item active">Покрышкина</li>
+              <li class="match-list__item">Чкалова</li>
+              <li class="match-list__item">Первенство</li>
+            </ul>
+            <div class="match__dropdown d-block d-md-none mx-3">
+              <a class="dropdown-toggle" href="#" id="matchDrop2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Покрышкина
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="matchDrop2">
+                <li><a class="dropdown-item" href="#">Покрышкина</a></li>
+                <li><a class="dropdown-item" href="#">Чкалова</a></li>
+                <li><a class="dropdown-item" href="#">Первенство</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Место</th>
+                  <th scope="col">Игрок</th>
+                  <th scope="col">Команда</th>
+                  <th scope="col">И</th>
+                  <th scope="col">Г</th>
+                  <th scope="col">П</th>
+                  <th scope="col">О</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Овечкин А.</td>
+                  <td>Арпа</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Овечкин А.</td>
+                  <td>Арпа</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Овечкин А.</td>
+                  <td>Арпа</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Овечкин А.</td>
+                  <td>Арпа</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Овечкин А.</td>
+                  <td>Арпа</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>7</td>
+                  <td>14</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="leader-description">
+            Бомбардиры - хоккеисты, набравшие наибольшее количество результативных баллов (очков), определяемых как сумма заброшенных шайб (голов) и результативных передач
+          </p>
+          <a href="#" class="match__link link d-block text-end">Смотреть всех лидеров</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container">
+      <h2 class="headline">Товары на Hockey-Dreams.ru</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-4">
+        <div class="col">
+          <div class="prod-card">
+            <div class="prod-img w-100 d-flex justify-content-center position-relative">
+              <img src="http://hockey-dreams.ru/zed/photo/m2286_1620.jpg" alt="" class="img-fluid" />
+              <span class="hover-bg position-absolute"></span>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+            <div class="prod-descript">
+              <p class="prod-name text-center">Штаны для бега Under Armour Qualifier W-Up Pant 410</p>
+              <div class="d-flex flex-column align-items-center mt-4">
+                <p class="prod-price">3990 руб.</p>
+                <a href="#" class="prod-btn">Купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="prod-card">
+            <div class="prod-img w-100 d-flex justify-content-center position-relative">
+              <img src="http://hockey-dreams.ru/zed/photo/m2286_1620.jpg" alt="" class="img-fluid" />
+              <span class="hover-bg position-absolute"></span>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+            <div class="prod-descript">
+              <p class="prod-name text-center">Штаны для бега Under Armour Qualifier W-Up Pant 410</p>
+              <div class="d-flex flex-column align-items-center mt-4">
+                <p class="prod-price">3990 руб.</p>
+                <a href="#" class="prod-btn">Купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="prod-card">
+            <div class="prod-img w-100 d-flex justify-content-center position-relative">
+              <img src="http://hockey-dreams.ru/zed/photo/m2286_1620.jpg" alt="" class="img-fluid" />
+              <span class="hover-bg position-absolute"></span>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+            <div class="prod-descript">
+              <p class="prod-name text-center">Штаны для бега Under Armour Qualifier W-Up Pant 410</p>
+              <div class="d-flex flex-column align-items-center mt-4">
+                <p class="prod-price">3990 руб.</p>
+                <a href="#" class="prod-btn">Купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="prod-card">
+            <div class="prod-img w-100 d-flex justify-content-center position-relative">
+              <img src="http://hockey-dreams.ru/zed/photo/m2286_1620.jpg" alt="" class="img-fluid" />
+              <span class="hover-bg position-absolute"></span>
+              <a href="#"><i class="fas fa-link"></i></a>
+            </div>
+            <div class="prod-descript">
+              <p class="prod-name text-center">Штаны для бега Under Armour Qualifier W-Up Pant 410</p>
+              <div class="d-flex flex-column align-items-center mt-4">
+                <p class="prod-price">3990 руб.</p>
+                <a href="#" class="prod-btn">Купить</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script src="./js/include/bootstrap.bundle.min.js"></script>
+  <script src="./js/include/swiper-bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
