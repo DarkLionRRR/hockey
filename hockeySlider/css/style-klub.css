@@ -1,0 +1,40 @@
+﻿/* ALL STYLE*/
+.c-form button {
+	width: 100%;
+	background: #e81f3e;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	height: 40px;
+	line-height: 2.5rem;
+	font-weight: 700;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.c-form button:hover {
+	background: #212529;
+	color: #fff;
+}
+
+.card{
+	border: 1px solid #e1e1e1;
+   background: #fff;
+   border-radius: 3px;
+   padding: 20px; 
+}
+.card .htc{
+	font-size: 1.125em;
+	font-weight: 600;
+	line-height: 1;
+}
+/* KOLONKI */
+.lcol{padding-right: 4em;}
+
+
+
+@media (max-width: 1199px) {
+.lcol{padding-right: 2em;}
+}
+@media (max-width: 991px) {
+.lcol{padding-right: 1em;}
+}

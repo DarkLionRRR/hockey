@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOCKEY SLIDER</title>
+  <link rel="stylesheet" href="./css/include/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/include/fontawesome.css" />
+  <link rel="stylesheet" href="./css/include/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style-klub.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="topbar d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 col-xl-4">
+            <ul class="topsocial">
+              <li>
+                <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#" class="insta"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#" class="in"><i class="fab fa-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#" class="yt"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-xl-4 d-flex justify-content-center">
+            <ul class="toplinks">
+              <li class="top-adress">г. Новосибирск, ул Гоголя 51</li>
+              <li class="top-phone"><a class="phone" href="#">+7 (383) 299‒11‒22</a></li>
+            </ul>
+          </div>
+          <div class="col-3 col-xl-4 d-flex justify-content-end">
+            <ul class="toplinks">
+              <li class="lang-btn dropdown">
+                  <a class="dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Рус
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                    <li class="d-block"><a class="dropdown-item" href="#">ENG</a></li>
+                    <li class="d-block"><a class="dropdown-item" href="#">FR</a></li>
+                    <li class="d-block"><a class="dropdown-item" href="#">GR</a></li>
+                    <li class="d-block"><a class="dropdown-item" href="#">AR</a></li>
+                  </ul>
+              </li>
+              <li class="acctount-btn"> <a href="#">Личный кабинет</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-7 col-lg-3 col-xl-4"><img class="img-fluid" src="./img/logo.png" alt="Логотип" /></div>
+          <nav class="col d-flex justify-content-end align-items-center">
+            <ul id="navigation" class="navbar w-100 d-none d-lg-flex">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  О лиге
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Чемпионат
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Участники
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Медиа
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Ссылка 1</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 2</a></li>
+                  <li><a class="dropdown-item" href="#">Ссылка 3</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Новости</a>
+              </li>
+              <li class="nav-item position-relative">
+                <a class="nav-link pr-0 shop-link" href="#">Магазин</a>
+              </li>
+            </ul>
+            <button class="nav-toggle-btn d-flex d-lg-none">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
+            <div class="mobile-nav-overly d-block d-lg-none">
+              <div class="mobile-nav">
+                <div class="accordion" id="mobileNav">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        О лиге
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#mobileNav">
+                      <div class="accordion-body">
+                        <ul class="accordion-list">
+                          <li><a href="#">Ссылка 1</a></li>
+                          <li><a href="#">Ссылка 2</a></li>
+                          <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Чемпионат
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#mobileNav">
+                      <div class="accordion-body">
+                        <ul class="accordion-list">
+                          <li><a href="#">Ссылка 1</a></li>
+                          <li><a href="#">Ссылка 2</a></li>
+                          <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Участники
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#mobileNav">
+                      <div class="accordion-body">
+                        <ul class="accordion-list">
+                          <li><a href="#">Ссылка 1</a></li>
+                          <li><a href="#">Ссылка 2</a></li>
+                          <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Медиа
+                      </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#mobileNav">
+                      <div class="accordion-body">
+                        <ul class="accordion-list">
+                          <li><a href="#">Ссылка 1</a></li>
+                          <li><a href="#">Ссылка 2</a></li>
+                          <li><a href="#">Ссылка 3</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <a class="accordion-button collapsed" href="#">Новости</a>
+                    </h2>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <a class="accordion-button collapsed" href="#">Магазин</a>
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+ <main class="bg-g">
+	<div class="container py-3">
+        <div class="row">
+			<div class="col-12 my-3">
+                <h1 class="heder">{Клубы}</h1>
+             </div>
+			<div class="col-12 col-md-3 lcol c-form">
+				<label class="mt-3 mb-1">Выберите кубок</label>
+                <select name="" id="" class="form-control form-select">
+					<option  value="1">Кубок Покрышкина</option>	
+					<option  value="2">Кубок Покрышкина</option>	
+				</select>
+				<label class="mt-3 mb-1">Выберите сезон</label>
+                <select name="" id="" class="form-control form-select">
+					<option  value="1">2020-2021</option>	
+					<option  value="2">2020-2021</option>	
+				</select>
+				<button type="button" class="mt-3">Показать</button>
+             </div>
+			<div class="col-12 col-md-9">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+					<div class="col mt-4">
+						<div class="card h-100">
+							<div class="row d-flex align-items-center">
+							   <div class="col-4 p-0"><img src="img/logo/1.png" class="img-fluid"></div>
+							   <div class="col-8 p-0 htc">Сибирский антрацит</div>
+							</div>
+						 </div>
+					 </div>
+					 <div class="col mt-4">
+						<div class="card h-100">
+							<div class="row d-flex align-items-center">
+							   <div class="col-4 p-0"><img src="img/logo/2.png" class="img-fluid"></div>
+							   <div class="col-8 p-0 htc">Арпа</div>
+							</div>
+						 </div>
+					 </div>
+					 <div class="col mt-4">
+						<div class="card h-100">
+							<div class="row d-flex align-items-center">
+							   <div class="col-4 p-0"><img src="img/logo/3.png" class="img-fluid"></div>
+							   <div class="col-8 p-0 htc">Сибирсь-НЗХК</div>
+							</div>
+						 </div>
+					 </div>
+					 <div class="col mt-4">
+						<div class="card h-100">
+							<div class="row d-flex align-items-center">
+							   <div class="col-4 p-0"><img src="img/logo/1.png" class="img-fluid"></div>
+							   <div class="col-8 p-0">Сибирский антрацит</div>
+							</div>
+						 </div>
+					 </div>
+					 <div class="col mt-4">
+						<div class="card h-100">
+							<div class="row d-flex align-items-center">
+							   <div class="col-4 p-0"><img src="img/logo/2.png" class="img-fluid"></div>
+							   <div class="col-8 p-0">Арпа</div>
+							</div>
+						 </div>
+					 </div>
+					 <div class="col mt-4">
+						<div class="card h-100">
+							<div class="row d-flex align-items-center">
+							   <div class="col-4 p-0"><img src="img/logo/3.png" class="img-fluid"></div>
+							   <div class="col-8 p-0">Сибирсь-НЗХК</div>
+							</div>
+						 </div>
+					 </div>
+				</div>
+			</div>
+        </div>
+	</div>
+</main>	
+
+
+<section id="footer" class="py-5">
+  <div class="container">
+   <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="w-100"><img src="./img/logo-f.png" alt="Логотип" class="img-fluid" /></div>
+        <p class="footer__descript mt-4">
+          Сибирская Хоккейная Лига - Любительская хоккейная лига, действующая в городе Новосибирск. У нас играют больше 50 команд.
+        </p>
+        <p class="footer__adress mt-4">
+          Наш офис:<br/>г. Новосибирск, ул Гоголя 51
+        </p>
+        <p class="footer__phone mt-4">
+          Телефон:<br/>+7 (383) 299‒11‒22
+        </p>
+      </div>
+      <div class="col-12 col-md-6 mt-4 mt-md-0">
+        <div class="row">
+          <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Контакты</a></li>
+              <li><a href="#" class="footer__link">Документы</a></li>
+              <li><a href="#" class="footer__link">Партнеры</a></li>
+              <li><a href="#" class="footer__link">Руководство</a></li>
+              <li><a href="#" class="footer__link">Стадионы</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Календарь</a></li>
+              <li><a href="#" class="footer__link">Таблицы</a></li>
+              <li><a href="#" class="footer__link">Статистика</a></li>
+              <li><a href="#" class="footer__link">СДК</a></li>
+              <li><a href="#" class="footer__link">Трансферы</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Клубы</a></li>
+              <li><a href="#" class="footer__link">Игроки</a></li>
+              <li><a href="#" class="footer__link">Судьи</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Фото</a></li>
+              <li><a href="#" class="footer__link">Видео</a></li>
+              <li><a href="#" class="footer__link">Новости</a></li>
+              <li><a href="#" class="footer__link">Магазин</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__social mt-4 d-flex flex-wrap">
+          <a href="#" class="footer__social-btn d-block">vk.com/sibhl <i class="fab fa-vk"></i></a>
+          <a href="#" class="footer__social-btn d-block">sibirhl <i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer__social-btn d-block mt-md-3 mt-lg-0">Сибирская Хоккейная Лига <i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-2 d-flex flex-md-column justify-content-between justify-content-md-start align-items-center align-items-md-end mt-4 mt-md-0">
+        <p class="sponsor">
+          Генеральный спонсор: Группа “Сибантрацит”
+        </p>
+        <div class="mt-md-4"><img src="./img/sponsor-logo.svg" alt="" class="img-fluid" /></div>
+      </div>
+   </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+   <div class="row">
+      <div class="col-12 my-4">
+     <div class="copy">&copy; 2015-2021 ООО “Сибирская Хоккейная Лига”</div>
+      </div>
+   </div>
+  </div>
+</footer>
+	
+	
+  <script src="./js/include/bootstrap.bundle.min.js"></script>
+  <script src="./js/include/swiper-bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
