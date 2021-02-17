@@ -7,12 +7,29 @@ const menuTrigger = (button, overly, nav) => {
     lines.forEach((item, index) => item.classList.add(`line-${index + 1}`))
     overly.classList.add('show')
     nav.classList.add('show')
+    document.body.classList.add('modal-open')
+    document.body.style.paddingRight = '17px'
   } else {
     button.classList.remove('active')
     lines.forEach((item, index) => item.classList.remove(`line-${index + 1}`))
     overly.classList.remove('show')
     nav.classList.remove('show')
+    document.body.classList.remove('modal-open')
+    document.body.style.paddingRight = ''
   }
+}
+
+const sortTrigger = (button, allButtons) => {
+  const sortIcon = button.querySelector('.sort-icon')
+
+  allButtons.forEach(btn => {
+    if (btn !== button) {
+      btn.querySelector('.sort-icon').classList.remove('active')
+      btn.querySelector('.sort-icon').classList.add('d-none')
+    }
+  })
+  sortIcon.classList.remove('d-none')
+  sortIcon.classList.contains('active') ? sortIcon.classList.remove('active') : sortIcon.classList.add('active')
 }
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -70,5 +87,33 @@ window.addEventListener('DOMContentLoaded', () => {
       type: 'bullets',
       clickable: true
     },
-  });
-});
+  })
+
+  // gamers sort (only switch sort-icon)
+  const sortBtn = document.querySelectorAll('[data-role="sort-btn"]')
+
+  sortBtn.forEach(btn => btn.addEventListener('click', () => sortTrigger(btn, sortBtn)))
+
+  //range
+  ionRangeSlider('#weight', {
+    type: "double",
+    min: 62,
+    max: 188,
+    grid: true,
+    grid_num: 5
+  })
+  ionRangeSlider('#age', {
+    type: "double",
+    min: 17,
+    max: 42,
+    grid: true,
+    grid_num: 5
+  })
+  ionRangeSlider('#height', {
+    type: "double",
+    min: 170,
+    max: 205,
+    grid: true,
+    grid_num: 5
+  })
+})

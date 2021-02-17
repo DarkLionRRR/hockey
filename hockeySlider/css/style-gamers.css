@@ -1,0 +1,67 @@
+.table-gamers .first-col { min-width: 200px; }
+.table-gamers .date-col { min-width: 135px; }
+.table-gamers [data-role=sort-btn] { user-select: none; }
+.gamers-avatar {
+  border-radius: 50%;
+  width: 45px;
+  margin-right: 15px;
+}
+.sort-icon.active { transform: translate(-50%, 50%) rotate(180deg); }
+.sort-icon {
+  content: "";
+  color: #007aff;
+  font-size: 1.5rem;
+
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  transition: transform .25s;
+}
+
+/* PANEL PARAM FOR SEARCH GAMER */
+.panel-param { padding: 15px; }
+.panel-title { font-size: 1.2rem; }
+.form-search input { padding-left: 2rem; }
+.form-search i {
+  color: #007aff;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+.alphabet-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: opacity .25;
+}
+.alphabet-btn:focus { outline: none; }
+.alphabet-btn:hover { opacity: .5; }
+
+/* RANGE */
+.irs--flat .irs-handle > i:first-child {
+  top: -4px;
+  left: 50%;
+  min-width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  border-radius: 50%;
+  background-color: #007aff;
+}
+.irs--flat .irs-line { height: 6px; }
+.irs--flat .irs-bar {
+  height: 6px;
+  background-color: #007aff;
+}
+.irs--flat .irs-from,
+.irs--flat .irs-to {
+  color: white;
+  font-size: 10px;
+  line-height: 1.333;
+  text-shadow: none;
+  padding: 1px 5px;
+  background-color: #007aff;
+  border-radius: 4px;
+}
+.irs--flat .irs-from::before,
+.irs--flat .irs-to::before { border-top-color: #007aff; }
