@@ -56,7 +56,6 @@ window.addEventListener('DOMContentLoaded', () => {
   
   //slider
   new Swiper('.slider-score', {
-    // slidesPerView: 5,
     spaceBetween: 20,
     navigation: {
       nextEl: '.score-button-next',
@@ -65,13 +64,13 @@ window.addEventListener('DOMContentLoaded', () => {
     loop: true,
     breakpoints: {
       992: {
-        slidesPerView: 5,
-      },
-      768: {
         slidesPerView: 3,
       },
-      375: {
+      768: {
         slidesPerView: 2,
+      },
+      375: {
+        slidesPerView: 1,
       },
     }
   })
@@ -82,11 +81,11 @@ window.addEventListener('DOMContentLoaded', () => {
       prevEl: '.swiper-button-prev',
     },
     loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   type: 'bullets',
+    //   clickable: true
+    // },
   })
 
   // gamers sort (only switch sort-icon)
@@ -95,25 +94,79 @@ window.addEventListener('DOMContentLoaded', () => {
   sortBtn.forEach(btn => btn.addEventListener('click', () => sortTrigger(btn, sortBtn)))
 
   //range
-  ionRangeSlider('#weight', {
-    type: "double",
-    min: 62,
-    max: 188,
-    grid: true,
-    grid_num: 5
+  // ionRangeSlider('#weight', {
+  //   type: "double",
+  //   min: 62,
+  //   max: 188,
+  //   grid: true,
+  //   grid_num: 5
+  // })
+  // ionRangeSlider('#age', {
+  //   type: "double",
+  //   min: 17,
+  //   max: 42,
+  //   grid: true,
+  //   grid_num: 5
+  // })
+  // ionRangeSlider('#height', {
+  //   type: "double",
+  //   min: 170,
+  //   max: 205,
+  //   grid: true,
+  //   grid_num: 5
+  // })
+
+  const weightSlider = document.getElementById('weight-slider')
+  const weight = document.getElementById('weight')
+  const weightInputs = [].slice.call(weight.querySelectorAll('.range-form__input'))
+  
+  noUiSlider.create(weightSlider, {
+      start: [62, 188],
+      connect: true,
+      range: {
+          'min': 62,
+          'max': 188
+      },
+      step: 1
   })
-  ionRangeSlider('#age', {
-    type: "double",
-    min: 17,
-    max: 42,
-    grid: true,
-    grid_num: 5
+
+  weightSlider.noUiSlider.on('update', function(values, handler) {
+    weightInputs[handler].value = Math.round(values[handler])
   })
-  ionRangeSlider('#height', {
-    type: "double",
-    min: 170,
-    max: 205,
-    grid: true,
-    grid_num: 5
+
+  const ageSlider = document.getElementById('age-slider')
+  const age = document.getElementById('age')
+  const ageInputs = [].slice.call(age.querySelectorAll('.range-form__input'))
+
+  noUiSlider.create(ageSlider, {
+      start: [17, 42],
+      connect: true,
+      range: {
+          'min': 17,
+          'max': 42
+      },
+      step: 1
+  })
+
+  ageSlider.noUiSlider.on('update', function(values, handler) {
+    ageInputs[handler].value = Math.round(values[handler])
+  })
+
+  const heightSlider = document.getElementById('height-slider')
+  const height = document.getElementById('height')
+  const heightInputs = [].slice.call(height.querySelectorAll('.range-form__input'))
+
+  noUiSlider.create(heightSlider, {
+      start: [170, 205],
+      connect: true,
+      range: {
+          'min': 170,
+          'max': 205
+      },
+      step: 1
+  })
+
+  heightSlider.noUiSlider.on('update', function(values, handler) {
+    heightInputs[handler].value = Math.round(values[handler])
   })
 })

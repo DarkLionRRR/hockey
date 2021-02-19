@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/include/fontawesome.css" />
   <link rel="stylesheet" href="./css/include/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/include/rangeslider.css" />
+  <link rel="stylesheet" href="./css/include/nouislider.min.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/style-gamers.css" />
 </head>
@@ -276,13 +277,28 @@
               <option  value="2">Мастер</option>
               <option  value="3">Любитель</option>
             </select>
-
-            <label class="range-form mt-3 mb-1">Вес 62-188</label>
-            <input type="text" id="weight" name="weight" value="" />
-            <label class="range-form mt-3 mb-1">Возраст 17-42</label>
-            <input type="text" id="age" name="age" value="" />
-            <label class="range-form mt-3 mb-1">Рост 170-205</label>
-            <input type="text" id="height" name="height" value="" />
+            
+            <label id="weight" class="range-form my-3">
+              <span class="ragne-name">Вес</span>
+              <input type="number" class="range-form__input" min="62" max="188" />
+              <span class="ragne-dash">-</span>
+              <input type="number" class="range-form__input" min="62" max="188" />
+            </label>
+            <div id="weight-slider"></div>
+            <label id="age" class="range-form my-3">
+              <span class="ragne-name">Возраст</span>
+              <input type="number" class="range-form__input" min="17" max="42" />
+              <span class="ragne-dash">-</span>
+              <input type="number" class="range-form__input" min="17" max="42" />
+            </label>
+            <div id="age-slider"></div>
+            <label id="height" class="range-form my-3">
+              <span class="ragne-name">Рост</span>
+              <input type="number" class="range-form__input" min="170" max="205" />
+              <span class="ragne-dash">-</span>
+              <input type="number" class="range-form__input" min="170" max="205" />
+            </label>
+            <div id="height-slider"></div>
           </div>
         </div>
 
@@ -450,6 +466,7 @@
   <script src="./js/include/bootstrap.bundle.min.js"></script>
   <script src="./js/include/swiper-bundle.min.js"></script>
   <script src="./js/include/rangeslider.min.js"></script>
+  <script src="./js/include/nouislider.min.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>

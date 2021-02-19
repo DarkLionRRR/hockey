@@ -39,29 +39,48 @@
 .alphabet-btn:hover { opacity: .5; }
 
 /* RANGE */
-.irs--flat .irs-handle > i:first-child {
-  top: -4px;
-  left: 50%;
-  min-width: 20px;
-  height: 20px;
-  margin-left: -10px;
-  border-radius: 50%;
-  background-color: #007aff;
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
-.irs--flat .irs-line { height: 6px; }
-.irs--flat .irs-bar {
-  height: 6px;
-  background-color: #007aff;
+
+/* Firefox */
+input[type=number] { -moz-appearance: textfield; }
+
+.range-form__input {
+  border: none;
+  width: 30px;
 }
-.irs--flat .irs-from,
-.irs--flat .irs-to {
-  color: white;
-  font-size: 10px;
-  line-height: 1.333;
-  text-shadow: none;
-  padding: 1px 5px;
-  background-color: #007aff;
-  border-radius: 4px;
+.range-form__input:focus { outline: none; }
+
+.noUi-target {
+  background: #e7e7e7;
+  border-radius: 3px;
+  border: none;
+  box-shadow: none;
+  height: 3px;
 }
-.irs--flat .irs-from::before,
-.irs--flat .irs-to::before { border-top-color: #007aff; }
+.noUi-connects {
+  border-radius: 3px;
+}
+.noUi-connect {
+  background: #007aff;
+}
+.noUi-handle:after, .noUi-handle:before {
+  display: none;
+}
+.noUi-handle {
+  border: none;
+  border-radius: 100%;
+  background: #007aff;
+  cursor: default;
+  box-shadow: none;
+}
+.noUi-horizontal .noUi-handle {
+  width: 25px;
+  height: 25px;
+  top: -11px;
+}
+.noUi-horizontal .noUi-handle:focus { outline: none; }
